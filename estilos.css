@@ -1,0 +1,1064 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D0D0D;
+    color: #f1f1f1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C1E;
+    /* Mantenemos un padding general para la parte superior/inferior,
+       pero ajustamos el padding derecho para el espacio del botón. */
+    padding: 0.8rem 2rem 0.8rem 2rem; /* Puedes mantener este padding general si lo deseas */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    /* Asegura que el contenido interno no se desborde */
+    overflow: hidden; /* Aunque esto no debería ser necesario con box-sizing, es una seguridad */
+  }
+  
+  /* Aumenta el padding-right del navbar para dar espacio al botón de contacto */
+  /* Este padding se sumará al padding de 2rem que ya tenías en el navbar */
+  .navbar {
+      padding-right: 5rem; /* Aumenta este valor si necesitas más espacio */
+  }
+  
+  
+  .menu {
+    display: flex;
+    /* Aumenta el gap entre los elementos del menú */
+    gap: 1.8rem; /* Mantenemos el ajuste anterior */
+  }
+  
+  .nav-link {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block; /* Mantenemos esto, es importante */
+    white-space: nowrap; /* Asegura que el texto "Contacto" no se rompa en varias líneas */
+  }
+  
+  .nav-link:hover {
+    color: #C30010;
+  }
+  
+  .nav-link.contacto {
+    border: 1px solid #C30010;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* No necesitamos margin-left si el padding del navbar es suficiente */
+    /* margin-left: 0.5rem; */ /* Puedes quitar esto si el padding-right del navbar lo resuelve */
+  }
+  
+  .nav-link.contacto:hover {
+    background-color: #C30010;
+    color: #fff;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #0A2342, #1C1C1E);
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .logo img {
+    height: 66px;
+    width: auto;
+  }
+
+  .contenido-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contenido-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-cta {
+    background-color: #C30010;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-cta:hover {
+    background-color: #5A0000;
+    transform: scale(1.05);
+  }
+  
+  .sobre {
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(to right, #0A2342, #1C1C1E);
+    color: #f1f1f1;
+    text-align: center;
+  }
+  
+  .titulo-seccion {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #C30010;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+  
+  .tarjetas-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .tarjeta {
+    background-color: #1C1C1E;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tarjeta h3 {
+    color: #C30010;
+    margin-bottom: 1rem;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(195, 0, 16, 0.3);
+  }
+  
+  .tarjeta ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .tarjeta li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .servicios {
+    background: linear-gradient(to right, #0A2342, #1C1C1E);
+    color: #f1f1f1;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+  }
+  
+  .grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .card-servicio {
+    background-color: #1C1C1E;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-servicio i {
+    font-size: 2.5rem;
+    color: #C30010;
+    margin-bottom: 1rem;
+  }
+  
+  .card-servicio h3 {
+    margin-bottom: 0.8rem;
+    color: #f1f1f1;
+  }
+  
+  .card-servicio p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .card-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(195, 0, 16, 0.3);
+  }
+  
+  .portafolio {
+    background: linear-gradient(to right, #0A2342, #1C1C1E);
+    color: #f1f1f1;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+    overflow-x: hidden;
+  }
+  
+  .card-portafolio {
+    width: 300px;
+    background-color: #1C1C1E;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-portafolio h3 {
+    margin: 1rem 0 0.5rem;
+    color: #C30010;
+  }
+  
+  .card-portafolio p {
+    padding: 0 1rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .card-portafolio:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Mini carrusel interno */
+  .mini-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  
+  .mini-carousel img {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Imagen normal (para proyectos sin mini carrusel) */
+  .card-portafolio > img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Scrollbar visual */
+  .carousel::-webkit-scrollbar,
+  .mini-carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+  .carousel::-webkit-scrollbar-thumb,
+  .mini-carousel::-webkit-scrollbar-thumb {
+    background: #C30010;
+    border-radius: 4px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .carousel {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+  
+    .card-portafolio {
+      flex: 0 0 auto;
+    }
+  }
+  
+
+  /*blog/*
+
+  /* --- Estilos específicos para la página del Blog (blog.php) --- */
+
+/* Contenedor principal del blog para centrar y limitar ancho */
+.blog-container {
+    display: flex; /* Usamos flexbox para el diseño de contenido principal y sidebar */
+    max-width: 1200px; /* Limita el ancho máximo del contenido del blog */
+    margin: 100px auto 4rem auto; /* Ajusta el margen superior para dejar espacio al navbar fijo */
+    padding: 0 2rem; /* Padding a los lados */
+    gap: 3rem; /* Espacio entre el contenido principal y el sidebar */
+    flex-wrap: wrap; /* Permite que el sidebar se mueva abajo en pantallas pequeñas */
+    
+}
+
+/* Sección Hero del Blog */
+.blog-hero {
+    background: linear-gradient(to right, #0A2342, #1C1C1E);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem; /* Espacio debajo del hero */
+    width: 100%; /* Ocupa todo el ancho disponible en el contenedor */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.blog-hero h1 {
+    font-size: 3rem;
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+}
+
+.blog-hero p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección de Últimas Publicaciones */
+.latest-posts {
+    flex: 3; /* Ocupa más espacio que el sidebar */
+    min-width: 60%; /* Asegura un ancho mínimo para el contenido principal */
+}
+
+.latest-posts h2 {
+    font-size: 2.5rem;
+    color: #C30010;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 2.5rem; /* Espacio entre las tarjetas de posts */
+}
+
+.blog-post-card {
+    background-color: #1C1C1E;
+    border-radius: 12px;
+    overflow: hidden; /* Asegura que la imagen no se salga del borde */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(195, 0, 16, 0.4);
+}
+
+.blog-post-card img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes de los posts */
+    object-fit: cover; /* Recorta la imagen para que cubra el espacio */
+    border-bottom: 1px solid #333;
+}
+
+.blog-post-card .post-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+.blog-post-card h3 {
+    font-size: 1.6rem;
+    color: #C30010;
+    margin-bottom: 0.8rem;
+}
+
+.blog-post-card .post-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.blog-post-card .post-meta i {
+    margin-right: 0.5rem;
+    color: #C30010;
+}
+
+.blog-post-card p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Permite que el párrafo se estire */
+}
+
+.blog-post-card .read-more {
+    color: #C30010;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex; /* Para alinear el icono */
+    align-items: center;
+    transition: color 0.3s ease;
+    margin-top: auto; /* Empuja el botón "Leer más" hacia abajo */
+}
+
+.blog-post-card .read-more:hover {
+    color: #ff5050;
+}
+
+.blog-post-card .read-more i {
+    margin-left: 0.5rem;
+    font-size: 0.9em;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 0.8rem;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid #C30010;
+    border-radius: 5px;
+    color: #C30010;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #C30010;
+    color: #fff;
+}
+
+.page-link.active {
+    background-color: #C30010;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* Sidebar */
+.sidebar {
+    flex: 1; /* Ocupa menos espacio que el contenido principal */
+    min-width: 250px; /* Ancho mínimo para el sidebar */
+    background-color: #1C1C1E;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-widget {
+    margin-bottom: 2rem;
+}
+
+.sidebar-widget h3 {
+    font-size: 1.8rem;
+    color: #C30010;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.8rem;
+}
+
+/* Búsqueda en el Sidebar */
+.search-widget form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-widget input[type="text"] {
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #C30010;
+    border-radius: 25px;
+    background-color: #0D0D0D;
+    color: #f1f1f1;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-widget input[type="text"]::placeholder {
+    color: #888;
+}
+
+.search-widget button[type="submit"] {
+    background-color: #C30010;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Botón redondo */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-widget button[type="submit"]:hover {
+    background-color: #9A000C;
+}
+
+/* Categorías y Posts Populares en el Sidebar */
+.categories-widget ul,
+.popular-posts-widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories-widget li,
+.popular-posts-widget li {
+    margin-bottom: 0.8rem;
+}
+
+.categories-widget a,
+.popular-posts-widget a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block; /* Para que el área cliqueable sea más grande */
+    padding: 0.3rem 0;
+}
+
+.categories-widget a:hover,
+.popular-posts-widget a:hover {
+    color: #C30010;
+}
+
+/* Media Queries para Responsividad del Blog */
+@media (max-width: 1024px) {
+    .blog-container {
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .blog-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .latest-posts h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        flex-direction: column; /* Apila el contenido y el sidebar */
+        margin-top: 80px; /* Ajusta para que el navbar no tape el contenido */
+        padding: 0 1rem;
+    }
+
+    .blog-hero {
+        padding: 3rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+
+    .blog-hero p {
+        font-size: 1rem;
+    }
+
+    .latest-posts, .sidebar {
+        flex: auto; /* Ocupan todo el ancho disponible */
+        min-width: unset; /* Reinicia el ancho mínimo */
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 2rem;
+    }
+
+    .latest-posts h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .sidebar {
+        margin-top: 3rem; /* Espacio entre el contenido principal y el sidebar apilado */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-container {
+        padding: 0 0.8rem;
+    }
+
+    .blog-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .blog-hero p {
+        font-size: 0.9rem;
+    }
+
+    .blog-post-card img {
+        height: 160px;
+    }
+
+    .blog-post-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .blog-post-card .post-content {
+        padding: 1rem;
+    }
+
+    .blog-post-card p {
+        font-size: 0.9rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap; /* Permite que los enlaces de paginación se rompan si son muchos */
+    }
+}
+/* --- Estilos para el Footer --- */
+.footer {
+    background-color: #1C1C1E; /* Color de fondo oscuro, similar al navbar */
+    color: #f1f1f1; /* Color de texto claro */
+    padding: 4rem 2rem 1.5rem; /* Padding superior, lateral y menor abajo */
+    margin-top: 5rem; /* Espacio por encima del footer */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5); /* Sombra superior */
+    border-top: 1px solid #333; /* Borde sutil */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye el contenido uniformemente */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem; /* Espacio entre las columnas del footer */
+}
+
+.footer-section {
+    flex: 1; /* Permite que las secciones se distribuyan */
+    min-width: 250px; /* Ancho mínimo para cada sección */
+    padding: 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    color: #C30010; /* Color de acento para los títulos */
+    margin-bottom: 1.5rem;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 0.5rem;
+}
+
+/* Línea decorativa debajo de los títulos del footer */
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px; /* Ancho de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: #C30010;
+    border-radius: 5px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #a0a0a0; /* Color de texto ligeramente más tenue */
+    margin-bottom: 1rem;
+}
+
+/* Estilos para los enlaces en el footer */
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section.links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.footer-section.links a:hover {
+    color: #C30010;
+}
+
+/* Estilos para la sección de Contacto en el footer */
+.footer-section.contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.footer-section.contact p i {
+    color: #C30010;
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+}
+
+/* Estilos para los iconos de redes sociales */
+.footer-section .socials {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-section .socials a {
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section .socials a:hover {
+    color: #C30010;
+    transform: translateY(-3px);
+}
+
+/* Estilos para la barra de derechos de autor */
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333; /* Línea separadora */
+    color: #888; /* Color de texto más discreto */
+    font-size: 0.9rem;
+}
+
+/* Media Queries para responsividad del Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center; /* Centra las secciones */
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: unset; /* Elimina el min-width */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 1rem 0; /* Ajusta el padding */
+    }
+
+    .footer-section h3::after {
+        left: 50%; /* Centra la línea decorativa */
+        transform: translateX(-50%);
+    }
+
+    .footer-section.contact p {
+        justify-content: center; /* Centra el contenido de contacto */
+    }
+
+    .footer-section .socials {
+        justify-content: center; /* Centra los iconos sociales */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 3rem 1rem 1rem;
+    }
+}
+
+
+
+/* contacto */
+/* --- Estilos para la página de Contacto (contacto.php) --- */
+
+/* Contenedor principal de contacto */
+.contact-container {
+    max-width: 1200px;
+    margin: 100px auto 4rem auto; /* Espacio para navbar fijo */
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Columna de formulario y columna de info */
+    gap: 4rem; /* Espacio entre secciones */
+    align-items: flex-start; /* Alinea secciones desde arriba */
+}
+
+/* Sección Hero del Contacto */
+.contact-hero {
+    grid-column: 1 / -1; /* Ocupa todo el ancho en la cuadrícula */
+    background: linear-gradient(to right, #0A2342, #1C1C1E);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem; /* Espacio debajo del hero */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección del Formulario de Contacto */
+.contact-form-section {
+    background-color: #1C1C1E;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-section h2 {
+    font-size: 2.2rem;
+    color: #C30010;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #0D0D0D;
+    color: #f1f1f1;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #C30010;
+    box-shadow: 0 0 0 3px rgba(195, 0, 16, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 120px;
+}
+
+.contact-form .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #C30010;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #9A000C;
+    transform: translateY(-2px);
+}
+
+/* Mensajes de feedback (éxito/error) */
+.message {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde oscuro */
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+    border: 1px solid #f5c6cb;
+}
+/* Estilo para los mensajes de éxito/error en el tema oscuro */
+.contact-container .message.success {
+    background-color: #004d00; /* Verde oscuro para fondo */
+    color: #e6ffe6; /* Verde claro para texto */
+    border-color: #006400;
+}
+
+.contact-container .message.error {
+    background-color: #660000; /* Rojo oscuro para fondo */
+    color: #ffe6e6; /* Rojo claro para texto */
+    border-color: #800000;
+}
+
+
+/* Sección de Información de Contacto */
+.contact-info-section {
+    background-color: #1C1C1E;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.contact-info-section h2 {
+    font-size: 2.2rem;
+    color: #C30010;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-info-section .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+.contact-info-section .info-item i {
+    color: #C30010; /* Color de acento para los iconos */
+    font-size: 1.6rem;
+    margin-right: 1.2rem;
+    min-width: 30px; /* Asegura espacio para iconos grandes */
+    text-align: center;
+}
+
+.contact-info-section .info-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.socials-contact-page {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.socials-contact-page h3 {
+    font-size: 1.6rem;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+}
+
+.socials-contact-page a {
+    color: #f1f1f1;
+    font-size: 1.8rem;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials-contact-page a:hover {
+    color: #C30010;
+    transform: translateY(-3px);
+}
+
+/* Media Queries para responsividad del Contacto */
+@media (max-width: 1024px) {
+    .contact-container {
+        gap: 2.5rem;
+        padding: 0 1.5rem;
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+
+    .contact-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form-section,
+    .contact-info-section {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        margin-top: 80px;
+        padding: 0 1rem;
+    }
+
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .contact-form-section h2,
+    .contact-info-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form .form-group label {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form .btn-submit {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .contact-info-section .info-item {
+        font-size: 1rem;
+    }
+
+    .socials-contact-page h3 {
+        font-size: 1.4rem;
+    }
+
+    .socials-contact-page a {
+        font-size: 1.5rem;
+    }
+}

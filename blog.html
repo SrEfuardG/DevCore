@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCore - Blog de Desarrollo de Software</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo DevCore">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="sobre.html" class="nav-link">Sobre DevCore</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="portafolio.html" class="nav-link">Portafolio</a>
+            <a href="blog.php" class="nav-link">Blog</a>
+            <a href="contacto.php" class="nav-link contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero blog-hero">
+        <div class="contenido-hero">
+            <h1>Blog de DevCore</h1>
+            <p>Ideas, tendencias y soluciones innovadoras en el mundo del desarrollo de software.</p>
+        </div>
+    </section>
+
+    <main class="blog-main">
+        <div class="container">
+            <div class="blog-grid">
+                <section class="blog-posts">
+                    <h2 class="titulo-seccion">Últimas Publicaciones</h2>
+
+                    <article class="blog-post-card">
+                        <img src="https://via.placeholder.com/600x300/1C1C1E/f1f1f1?text=DevOps+para+Startups" alt="Imagen del Artículo 1">
+                        <div class="post-content">
+                            <h3>Simplificando el DevOps para Startups: Herramientas Esenciales</h3>
+                            <p class="post-meta">
+                                <span class="author"><i class="fas fa-user"></i> DevCore Team</span>
+                                <span class="date"><i class="fas fa-calendar-alt"></i> 25 de Junio, 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> DevOps, Cloud</span>
+                            </p>
+                            <p>Exploramos cómo las startups pueden implementar prácticas DevOps de manera eficiente utilizando herramientas clave para acelerar sus ciclos de desarrollo y despliegue...</p>
+                            <a href="articulo1.html" class="btn-read-more">Leer Más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post-card">
+                        <img src="https://via.placeholder.com/600x300/1C1C1E/f1f1f1?text=IA+en+Desarrollo" alt="Imagen del Artículo 2">
+                        <div class="post-content">
+                            <h3>El Futuro de la IA en el Desarrollo de Software: Más Allá del Código</h3>
+                            <p class="post-meta">
+                                <span class="author"><i class="fas fa-user"></i> DevCore Team</span>
+                                <span class="date"><i class="fas fa-calendar-alt"></i> 18 de Junio, 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> IA, Tendencias</span>
+                            </p>
+                            <p>La Inteligencia Artificial está transformando cada aspecto del desarrollo de software, desde la automatización de pruebas hasta la generación de código. Descubre las últimas tendencias...</p>
+                            <a href="articulo2.html" class="btn-read-more">Leer Más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post-card">
+                        <img src="https://via.placeholder.com/600x300/1C1C1E/f1f1f1?text=Seguridad+Web" alt="Imagen del Artículo 3">
+                        <div class="post-content">
+                            <h3>Principios Clave para Desarrollar Aplicaciones Web Seguras</h3>
+                            <p class="post-meta">
+                                <span class="author"><i class="fas fa-user"></i> DevCore Team</span>
+                                <span class="date"><i class="fas fa-calendar-alt"></i> 10 de Junio, 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Seguridad, WebDev</span>
+                            </p>
+                            <p>En un mundo digital lleno de amenazas, la seguridad no es una opción, es una necesidad. Aprende las mejores prácticas para proteger tus aplicaciones web...</p>
+                            <a href="articulo3.html" class="btn-read-more">Leer Más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">Siguiente &raquo;</a>
+                    </div>
+                </section>
+
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget search-widget">
+                        <h3>Buscar en el Blog</h3>
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Buscar publicaciones..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget categories-widget">
+                        <h3>Categorías</h3>
+                        <ul>
+                            <li><a href="#">Desarrollo Web (5)</a></li>
+                            <li><a href="#">Desarrollo Móvil (3)</a></li>
+                            <li><a href="#">DevOps (2)</a></li>
+                            <li><a href="#">Inteligencia Artificial (4)</a></li>
+                            <li><a href="#">Cloud Computing (3)</a></li>
+                            <li><a href="#">Seguridad Informática (2)</a></li>
+                            <li><a href="#">Gestión de Proyectos (1)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget recent-posts-widget">
+                        <h3>Publicaciones Recientes</h3>
+                        <ul>
+                            <li><a href="#">Desarrollo Ágil en Escala</a></li>
+                            <li><a href="#">Microservicios vs. Monolitos</a></li>
+                            <li><a href="#">Tendencias Frontend 2025</a></li>
+                            <li><a href="#">Automatización de Pruebas</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget tags-widget">
+                        <h3>Etiquetas Populares</h3>
+                        <div class="tags-cloud">
+                            <a href="#">JavaScript</a>
+                            <a href="#">Python</a>
+                            <a href="#">AWS</a>
+                            <a href="#">Azure</a>
+                            <a href="#">React</a>
+                            <a href="#">Node.js</a>
+                            <a href="#">Docker</a>
+                            <a href="#">Kubernetes</a>
+                            <a href="#">Ciberseguridad</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DevCore. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
